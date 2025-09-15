@@ -33,14 +33,20 @@ export default function MapGame() {
     // Street View API 
     useEffect(() => {
         if (isLoaded && randomLocation && streetViewRef.current) {
-        const panorama = new window.google.maps.StreetViewPanorama(
-            streetViewRef.current,
-            {
-            position: randomLocation,
-            pov: { heading: 100, pitch: 0 },
-            visible: true,
-            }
-        );
+            const panorama = new window.google.maps.StreetViewPanorama(
+                streetViewRef.current,
+                {
+                    position: randomLocation,
+                    pov: { heading: 100, pitch: 0 },
+                    visible: true,
+                    // controls
+                    addressControl: false,
+                    fullscreenControl: false,
+                    linksControl: false,
+                    panControl: false,
+                    // zoomControl: false,
+                }
+            );
         }
     }, [isLoaded, randomLocation]);
 
