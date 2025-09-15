@@ -5,6 +5,21 @@ export function getRandomCoords() {
   return { lat: Number(lat), lng: Number(lng) };
 }
 
+// Generate random place (if exist)
+export function findRandomStreetView(streetVS, setRandomLocation) {
+  const randomCoords = getRandomCoords();
+  const streetViewService = streetVS;
+  streetViewService.getPanorama({ location: randomCoords, radius: 50 }, (data, status) => {
+    if (status === "OK") {
+      setRandomLocation(data.location.latLng.toJSON());
+    } else {
+      // one more try
+      console.log("one more try to search place..");
+      findRandomStreetView(streetViewService, setRandomLocation);
+    }
+  });
+};
+
 // Distance (haversin)
 export function haversineDistance(coords1, coords2) {
   const R = 6371; // radius of Earth (km)
