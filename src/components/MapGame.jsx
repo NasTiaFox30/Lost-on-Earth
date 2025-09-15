@@ -7,6 +7,8 @@ import {
 } from "@react-google-maps/api";
 import { findRandomStreetView, haversineDistance } from "./Tools"
 import MessageBox from "./MessageBox";
+import stickman from '../assets/stickman_walk.gif';
+import earth from '../assets/earth.gif';
 
 export default function MapGame() {
     const { isLoaded } = useLoadScript({
@@ -96,7 +98,28 @@ export default function MapGame() {
     };
 
     if (!isLoaded) return <div>Loading Google Maps...</div>;
-    if (!randomLocation) return <div>Generating random place...</div>;
+
+    if (!randomLocation) {
+        return (
+            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50">
+                <div className="flex flex-col items-center">
+                    <img
+                        src={stickman}
+                        alt="Stickman"
+                        className="-mb-35 w-46 h-auto z-10"
+                    />
+                    <img
+                        src={earth}
+                        alt="Earth"
+                        className="w-100 h-auto"
+                    />
+                </div>
+                <div className="mt-4 text-black text-xl text-center">
+                    Generating random place...
+                </div>
+            </div>
+        )
+    }
 
     return (
     <div className="flex h-screen">
