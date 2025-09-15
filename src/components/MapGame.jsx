@@ -98,30 +98,8 @@ export default function MapGame() {
 
     if (!isLoaded) return <div>Loading Google Maps...</div>;
 
-    if (!randomLocation) {
-        return (
-            <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50">
-                <div className="flex flex-col items-center">
-                    <img
-                        src={stickman}
-                        alt="Stickman"
-                        className="-mb-35 w-46 h-auto z-10"
-                    />
-                    <img
-                        src={earth}
-                        alt="Earth"
-                        className="w-100 h-auto"
-                    />
-                </div>
-                <div className="mt-4 text-black text-xl text-center">
-                    Generating random place...
-                </div>
-            </div>
-        )
-    }
-
-   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    return (
+    <div className="relative flex flex-col md:flex-row h-screen">
         {/* Street View */}
         <div ref={streetViewRef} className="w-full h-1/2 md:w-1/2 md:h-full" />
 
