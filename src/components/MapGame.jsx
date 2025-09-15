@@ -57,7 +57,18 @@ export default function MapGame() {
                 setUserGuess({ lat: e.latLng.lat(), lng: e.latLng.lng() });
             }}
             >
-            {userGuess && <Marker position={userGuess} />}
+                {userGuess && (
+                    <Marker
+                        position={userGuess}
+                        icon={{ url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png" }}
+                    />
+                )}
+                {randomLocation && gameStatus !== 'playing' && (
+                    <Marker 
+                        position={randomLocation} 
+                        icon={{url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"}}
+                    />
+                )}
             </GoogleMap>
         </div>
 
