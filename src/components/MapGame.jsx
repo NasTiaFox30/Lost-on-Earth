@@ -19,4 +19,19 @@ export default function MapGame() {
         //   setRandomLocation(getRandomCoords());
         setRandomLocation({ lat: 40.748817, lng: -73.985428 }); // New-York
     }, []);
+    
+    // Street View API 
+    useEffect(() => {
+        if (isLoaded && randomLocation && streetViewRef.current) {
+        const panorama = new window.google.maps.StreetViewPanorama(
+            streetViewRef.current,
+            {
+            position: randomLocation,
+            pov: { heading: 100, pitch: 0 },
+            visible: true,
+            }
+        );
+        }
+    }, [isLoaded, randomLocation]);
+
 }
