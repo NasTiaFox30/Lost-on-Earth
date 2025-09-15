@@ -19,6 +19,7 @@ export default function MapGame() {
     const [distance, setDistance] = useState(null);
     const [guessesLeft, setGuessesLeft] = useState(5);
     const [gameStatus, setGameStatus] = useState('playing'); // game status 
+    const [showLine, setShowLine] = useState(false);
 
     // Generate location
     useEffect(() => {
