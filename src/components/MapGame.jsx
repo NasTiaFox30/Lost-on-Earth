@@ -115,7 +115,13 @@ export default function MapGame() {
         <div ref={streetViewRef} className="w-1/2 h-full" />
 
         {/* Message */}
-        {distance !== null && <MessageBox distance={distance} />}
-        </div>
+        <MessageBox
+            distance={distance}
+            guessesLeft={guessesLeft}
+            gameStatus={gameStatus}
+            onGuess={handleGuess}
+            onNewGame={resetGame}
+        />
+    </div>
   );
 }
