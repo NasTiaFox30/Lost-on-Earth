@@ -56,6 +56,7 @@ export default function MapGame() {
         // Check if won
         if (newDistance <= 1000) {
             setGameStatus('won');
+            setShowLine(true);
             return;
         }
 
@@ -64,6 +65,7 @@ export default function MapGame() {
         // Check if lost
         if (guessesLeft <= 1) {
             setGameStatus('lost');
+            setShowLine(true);
         }
     };
 
@@ -73,6 +75,7 @@ export default function MapGame() {
         setGuessesLeft(5);
         setDistance(null);
         setGameStatus('playing');
+        setShowLine(false);
         
         // Generate new random location
         if (isLoaded) {
