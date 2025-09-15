@@ -105,6 +105,13 @@ export default function MapGame() {
                         setUserGuess({ lat: e.latLng.lat(), lng: e.latLng.lng() });
                     }
                 }}
+                // controls
+                options={{
+                streetViewControl: false,
+                zoomControl: false,
+                fullscreenControl: false,
+                mapTypeControl: false,
+                }}
             >
                 {userGuess && (
                     <Marker
