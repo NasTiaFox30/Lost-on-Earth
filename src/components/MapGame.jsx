@@ -44,7 +44,7 @@ export default function MapGame() {
 
     const handleGuess = () => {
         if (!userGuess) {
-            alert("Firt mark place to pin!");
+            alert("First mark place to pin!");
             return;
         }
 
