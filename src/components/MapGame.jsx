@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import {
   GoogleMap,
   Marker,
+  Polyline,
   useLoadScript,
 } from "@react-google-maps/api";
 import { findRandomStreetView, haversineDistance } from "./Tools"
