@@ -60,7 +60,7 @@ export default function MapGame() {
         setGuessesLeft(guessesLeft - 1);
 
         // Check if lost
-        if (guessesLeft <= 0) {
+        if (guessesLeft <= 1) {
             setGameStatus('lost');
         }
     };
