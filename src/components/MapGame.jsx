@@ -115,6 +115,17 @@ export default function MapGame() {
                         icon={{url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"}}
                     />
                 )}
+                {showLine && userGuess && randomLocation && gameStatus !== 'playing' && (
+                    <Polyline
+                        path={getLinePath()}
+                        options={{
+                            strokeColor: "#ffae00ff",
+                            strokeOpacity: 0.8,
+                            strokeWeight: 4,
+                            geodesic: true,
+                        }}
+                    />
+                )}
             </GoogleMap>
         </div>
 
