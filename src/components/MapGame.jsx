@@ -34,4 +34,9 @@ export default function MapGame() {
         }
     }, [isLoaded, randomLocation]);
 
+    return (
+    <div className="flex h-screen">
+        
+    </div>
+    );
 }
