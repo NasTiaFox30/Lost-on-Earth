@@ -7,8 +7,7 @@ import {
 } from "@react-google-maps/api";
 import { findRandomStreetView, haversineDistance } from "./Tools"
 import MessageBox from "./MessageBox";
-import stickman from '../assets/stickman_walk.gif';
-import earth from '../assets/earth.gif';
+import LoadingScreen from "./LoadingScreen";
 
 export default function MapGame() {
     const { isLoaded } = useLoadScript({
@@ -180,6 +179,11 @@ export default function MapGame() {
             onGuess={handleGuess}
             onNewGame={resetGame}
         />
+
+        {/* Loading Overlay */}
+        {!randomLocation && (
+            <LoadingScreen/>
+        )}
     </div>
   );
 }
