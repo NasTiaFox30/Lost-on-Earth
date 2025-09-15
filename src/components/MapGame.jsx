@@ -75,7 +75,7 @@ export default function MapGame() {
                 setDistance(newDistance);
             }}
             >
-            Check >
+            Check 🔎
             </button>
         </div>
 
