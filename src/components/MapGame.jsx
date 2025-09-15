@@ -4,7 +4,8 @@ import {
   Marker,
   useLoadScript,
 } from "@react-google-maps/api";
-import {findRandomStreetView, haversineDistance } from "./Tools"
+import { findRandomStreetView, haversineDistance } from "./Tools"
+import MessageBox from "./MessageBox";
 
 export default function MapGame() {
     const { isLoaded } = useLoadScript({
