@@ -51,7 +51,11 @@ export default function MapGame() {
             >
             {userGuess && <Marker position={userGuess} />}
             </GoogleMap>
-        </div>    
+        </div>
+
+        {/* Street View */}
+        <div ref={streetViewRef} className="w-1/2 h-full" />
+            
         
     </div>
     );
