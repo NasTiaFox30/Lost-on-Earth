@@ -34,6 +34,9 @@ export default function MapGame() {
         }
     }, [isLoaded, randomLocation]);
 
+    if (!isLoaded) return <div>Loading Google Maps...</div>;
+    if (!randomLocation) return <div>Generating random place...</div>;
+
     return (
     <div className="flex h-screen">
         
