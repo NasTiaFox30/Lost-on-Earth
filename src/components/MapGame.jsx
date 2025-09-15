@@ -75,23 +75,6 @@ export default function MapGame() {
         {/* Street View */}
         <div ref={streetViewRef} className="w-1/2 h-full" />
 
-        {/* Check Button */}
-        <div className="absolute bottom-4 left-4 z-10">
-            <button
-            className="px-4 py-2 bg-green-500 text-white rounded"
-            onClick={() => {
-                if (!userGuess) {
-                alert("Спочатку зробіть свій вибір на карті!");
-                return;
-                }
-                const newDistance = haversineDistance(randomLocation, userGuess);
-                setDistance(newDistance);
-            }}
-            >
-            Check 🔎
-            </button>
-        </div>
-
         {/* Message */}
         {distance !== null && <MessageBox distance={distance} />}
         </div>
