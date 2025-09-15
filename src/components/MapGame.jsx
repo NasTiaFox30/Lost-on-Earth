@@ -16,6 +16,8 @@ export default function MapGame() {
     const [userGuess, setUserGuess] = useState(null);
     const streetViewRef = useRef(null); //container Street View
     const [distance, setDistance] = useState(null);
+    const [guessesLeft, setGuessesLeft] = useState(5);
+    const [gameStatus, setGameStatus] = useState('playing'); // game status 
 
     // Generate location
     useEffect(() => {
