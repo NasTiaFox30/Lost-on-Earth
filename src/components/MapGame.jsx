@@ -17,9 +17,11 @@ export default function MapGame() {
 
     // Generate location
     useEffect(() => {
-        //   setRandomLocation(getRandomCoords());
-        setRandomLocation({ lat: 40.748817, lng: -73.985428 }); // New-York
-    }, []);
+        if (isLoaded) {
+            let NewStreetViewService = new window.google.maps.StreetViewService();
+            findRandomStreetView(NewStreetViewService, setRandomLocation);
+         }
+    }, [isLoaded]);
     
     // Street View API 
     useEffect(() => {
