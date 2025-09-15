@@ -50,12 +50,14 @@ export default function MapGame() {
         {/* World Map */}
         <div className="w-1/2 h-full">
             <GoogleMap
-            zoom={2}
-            center={{ lat: 0, lng: 0 }}
-            mapContainerClassName="w-full h-full"
-            onClick={(e) => {
-                setUserGuess({ lat: e.latLng.lat(), lng: e.latLng.lng() });
-            }}
+                zoom={2}
+                center={{ lat: 0, lng: 0 }}
+                mapContainerClassName="w-full h-full"
+                onClick={(e) => {
+                    if (gameStatus === 'playing') {
+                        setUserGuess({ lat: e.latLng.lat(), lng: e.latLng.lng() });
+                    }
+                }}
             >
                 {userGuess && (
                     <Marker
