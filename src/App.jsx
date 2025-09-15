@@ -1,8 +1,9 @@
-export default function App() {
+import MapGame from "./components/MapGame";
 
+export default function App() {
   return (
     <>
-      Test
+      <MapGame />
     </>
-  )
+  );
 }
