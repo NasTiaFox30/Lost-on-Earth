@@ -20,8 +20,9 @@ export default function MapGame() {
     // Generate location
     useEffect(() => {
         if (isLoaded) {
-            let NewStreetViewService = new window.google.maps.StreetViewService();
-            findRandomStreetView(NewStreetViewService, setRandomLocation);
+            setRandomLocation({ lat: 40.748817, lng: -73.985428 }); // New-York
+            // let NewStreetViewService = new window.google.maps.StreetViewService();
+            // findRandomStreetView(NewStreetViewService, setRandomLocation);
          }
     }, [isLoaded]);
     
@@ -76,7 +77,10 @@ export default function MapGame() {
             >
             Check >
             </button>
-            </div>
-            </div>
+        </div>
+
+        {/* Message */}
+        {distance !== null && <MessageBox distance={distance} />}
+        </div>
   );
 }
