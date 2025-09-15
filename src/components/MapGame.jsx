@@ -42,6 +42,43 @@ export default function MapGame() {
         }
     }, [isLoaded, randomLocation]);
 
+    const handleGuess = () => {
+        if (!userGuess) {
+            alert("Firt mark place to pin!");
+            return;
+        }
+
+        const newDistance = haversineDistance(randomLocation, userGuess);
+        setDistance(newDistance);
+
+        // Check if won
+        if (newDistance <= 1000) {
+            setGameStatus('won');
+            return;
+        }
+
+        setGuessesLeft(guessesLeft - 1);
+
+        // Check if lost
+        if (guessesLeft <= 0) {
+            setGameStatus('lost');
+        }
+    };
+
+    const resetGame = () => {
+        setRandomLocation(null);
+        setUserGuess(null);
+        setGuessesLeft(5);
+        setDistance(null);
+        setGameStatus('playing');
+        
+        // Generate new random location
+        if (isLoaded) {
+            let NewStreetViewService = new window.google.maps.StreetViewService();
+            findRandomStreetView(NewStreetViewService, setRandomLocation);
+        }
+    };
+
     if (!isLoaded) return <div>Loading Google Maps...</div>;
     if (!randomLocation) return <div>Generating random place...</div>;
 
