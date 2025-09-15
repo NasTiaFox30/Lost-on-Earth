@@ -13,4 +13,10 @@ export default function MapGame() {
     const [randomLocation, setRandomLocation] = useState(null);
     const [userGuess, setUserGuess] = useState(null);
     const streetViewRef = useRef(null); //container Street View
+
+    // Generate location
+    useEffect(() => {
+        //   setRandomLocation(getRandomCoords());
+        setRandomLocation({ lat: 40.748817, lng: -73.985428 }); // New-York
+    }, []);
 }
