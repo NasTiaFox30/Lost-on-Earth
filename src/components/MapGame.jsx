@@ -121,10 +121,13 @@ export default function MapGame() {
         )
     }
 
-    return (
-    <div className="flex h-screen">
+   return (
+    <div className="flex flex-col md:flex-row h-screen">
+        {/* Street View */}
+        <div ref={streetViewRef} className="w-full h-1/2 md:w-1/2 md:h-full" />
+
         {/* World Map */}
-        <div className="w-1/2 h-full">
+        <div className="w-full h-1/2 md:w-1/2 md:h-full">
             <GoogleMap
                 zoom={2}
                 center={{ lat: 0, lng: 0 }}
@@ -167,9 +170,6 @@ export default function MapGame() {
                 )}
             </GoogleMap>
         </div>
-
-        {/* Street View */}
-        <div ref={streetViewRef} className="w-1/2 h-full" />
 
         {/* Message */}
         <MessageBox
