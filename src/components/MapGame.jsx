@@ -79,6 +79,11 @@ export default function MapGame() {
         }
     };
 
+    const getLinePath = () => {
+        if (!userGuess || !randomLocation) return [];
+        return [userGuess, randomLocation];
+    };
+
     if (!isLoaded) return <div>Loading Google Maps...</div>;
     if (!randomLocation) return <div>Generating random place...</div>;
 
