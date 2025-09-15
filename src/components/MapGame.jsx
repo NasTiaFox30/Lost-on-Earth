@@ -129,6 +129,7 @@ export default function MapGame() {
         {/* World Map */}
         <div className="w-full h-1/2 md:w-1/2 md:h-full">
             <GoogleMap
+                key={gameStatus === 'playing' ? 'round-playing' : 'round-done'}
                 zoom={2}
                 center={{ lat: 0, lng: 0 }}
                 mapContainerClassName="w-full h-full"
@@ -157,7 +158,7 @@ export default function MapGame() {
                         icon={{url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"}}
                     />
                 )}
-                {showLine && userGuess && randomLocation && gameStatus !== 'playing' && (
+                {gameStatus !== 'playing' && showLine && userGuess && randomLocation && (
                     <Polyline
                         path={getLinePath()}
                         options={{
