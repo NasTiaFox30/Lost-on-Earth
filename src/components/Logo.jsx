@@ -2,7 +2,7 @@ export default function Logo() {
     return (
         <div className="fixed flex flex-col items-center justify-center w-full z-50">
             <img
-                src="/public/logo.png"
+                src="logo.png"
                 alt="Lost on Earth Logo"
                 className="w-15 md:w-30"
             />
