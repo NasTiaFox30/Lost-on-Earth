@@ -1,12 +1,25 @@
-# React + Vite
+# Lost on Earth
+React + Vite + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Liczba godzin
+00 god.
 
-Currently, two official plugins are available:
+## Rozpoczęty - Zakończony
+15.09.2025 - 15.09.2025
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+# Application:
+Welcome to Lost on Earth—the ultimate global adventure! We'll drop you into a random street view anywhere in the world. Your mission: use the clues around you to pinpoint your exact location on the map. The more accurate your guess, the better your chance of winning! Think you can handle it? Let's find out!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Libraries:
+- @react-google-maps/api
+- @tailwindcss/vite
+- gh-pages --save-dev
+
+
+## Visit site: 
+
+
+---------------------------------------------------------------
+_**Creator: Anastasiia Bzova 2025**_
