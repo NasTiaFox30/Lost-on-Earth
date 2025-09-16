@@ -19,7 +19,7 @@ Welcome to Lost on Earth—the ultimate global adventure! We'll drop you into a 
 
 
 ## Visit site: 
-
+https://nastiafox30.github.io/Lost-on-Earth/
 
 ---------------------------------------------------------------
 _**Creator: Anastasiia Bzova 2025**_
