@@ -17,7 +17,7 @@ export default function MessageBox({ distance, guessesLeft, gameStatus, onNewGam
   }
 
   return (
-    <div className="m-auto w-100 absolute inset-x-0 bottom-10 z-20 bg-white p-4 rounded shadow-xl border border-gray-300 max-w-md mx-auto">
+    <div className="m-auto min-w-xxs absolute inset-x-0 bottom-10 z-20 bg-white p-4 rounded shadow-xl border border-gray-300 max-w-md mx-auto">
       <h1 className="text-xl font-bold mb-2">{title}</h1>
       <p className="mb-3">{message}</p>
     
