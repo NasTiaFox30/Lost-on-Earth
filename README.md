@@ -2,7 +2,7 @@
 React + Vite + Tailwind CSS
 
 ## Liczba godzin
-00 god.
+9 god.
 
 ## Rozpoczęty - Zakończony
 15.09.2025 - 15.09.2025
